@@ -8,11 +8,13 @@ YOU SHOULDN'T EVEN READ IT!
 #4       THIS PAGE       
 #Timezone1
 #Barounit0
-#GPSHobbs28697.182750702
-#GPSTurnons25
+#GPSHobbs55252.684734152
+#GPSTurnons76
 #LastAPTLBPD 
-#LastLat42.681324005127
-#LastLon23.586708068848
+#Lasttype0
+#LastidentLBSF 
+#LastLat42.125198364258
+#LastLon24.792150497437
 #RWYminlength1000
 #RWYsurface1
 #Fuelunit4
@@ -20,10 +22,10 @@ YOU SHOULDN'T EVEN READ IT!
 #RealGPS0
 #Timerstart0
 #Turnanti1
-#HSIinterf0
+#HSIinterf1
 #Volume50
 #VNV GS1
-#NAV5RNG7
+#NAV5RNG8
 #NAV5BRNG5
 #NAV5LNS321
 #NAV5SHOW0013
@@ -31,9 +33,9 @@ YOU SHOULDN'T EVEN READ IT!
 #NAV5ORIS3
 #SHOWHELI0
 #SHOWWAT0
-#NAVSYNC1
+#NAVSYNC0
 #GPSRATE1
-#PWRKNOB0
+#PWRKNOB1
 Ok, here's something
 to keep you entertained:
 Go to the STA 4 page

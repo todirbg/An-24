@@ -1,7 +1,7 @@
 size = {200, 200}
 
 -- define property table
-defineProperty("obs", globalPropertyf("sim/cockpit2/radios/actuators/nav1_obs_deg_mag_pilot"))  -- set the course
+defineProperty("obs", globalPropertyf("sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot"))  -- set the course
 defineProperty("fromto", globalPropertyi("an-24/gauges/obs1_fromto"))  -- set the from or to course
 defineProperty("fromto_lit", globalPropertyi("an-24/gauges/obs1_fromto_lit")) -- Nav-To-From indication, nav1, pilot, 0 is flag, 1 is to, 2 is from.
 -- images table

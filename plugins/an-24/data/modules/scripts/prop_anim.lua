@@ -125,14 +125,14 @@ function update()
 	left_prop_angle = left_prop_angle + left_rpm * gvar.frame_time * 2
 	right_prop_angle = right_prop_angle + right_rpm * gvar.frame_time * 2
 
-	if left_prop_angle > 360 then left_prop_angle = left_prop_angle - 360 end
-	if right_prop_angle > 360 then right_prop_angle = right_prop_angle - 360 end
+	if left_prop_angle >= 360 then left_prop_angle = left_prop_angle - 360 end
+	if right_prop_angle >= 360 then right_prop_angle = right_prop_angle - 360 end
 
 	-- set limits
 	local left_angle = left_prop_angle
 	local right_angle = right_prop_angle
-	while left_angle > 360 do left_angle = left_angle - 360 end
-	while right_angle > 360 do right_angle = right_angle - 360 end
+	if left_angle >= 360 then left_angle = left_angle - 360 end
+	if right_angle >= 360 then right_angle = right_angle - 360 end
 
 	set(prop_angle_1, left_angle)
 	set(prop_angle_2, right_angle)

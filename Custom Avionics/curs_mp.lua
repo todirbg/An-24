@@ -9,14 +9,14 @@ defineProperty("sp_ils", globalPropertyi("an-24/gauges/sp_ils")) -- switcher bet
 defineProperty("nav_select", globalPropertyi("an-24/gauges/nav_select")) -- selector between NAV1 and NAV2
 defineProperty("mrp_mode", globalPropertyi("an-24/gauges/mrp_mode")) -- 0 - landing, 1 = navigation
 
-defineProperty("v_plank_1", globalPropertyf("sim/cockpit2/radios/indicators/nav1_hdef_dots_pilot")) -- horizontal deflection on course
-defineProperty("h_plank_1", globalPropertyf("sim/cockpit2/radios/indicators/nav1_vdef_dots_pilot")) -- vertical deflection on glideslope
-defineProperty("cr_flag_1", globalPropertyf("sim/cockpit2/radios/indicators/nav1_flag_from_to_pilot")) -- Nav-To-From indication, nav1, pilot, 0 is flag, 1 is to, 2 is from.
+defineProperty("v_plank_1", globalPropertyf("sim/cockpit2/radios/indicators/hsi_hdef_dots_pilot")) -- horizontal deflection on course
+defineProperty("h_plank_1", globalPropertyf("sim/cockpit2/radios/indicators/hsi_vdef_dots_pilot")) -- vertical deflection on glideslope
+defineProperty("cr_flag_1", globalPropertyf("sim/cockpit2/radios/indicators/hsi_flag_from_to_pilot")) -- Nav-To-From indication, nav1, pilot, 0 is flag, 1 is to, 2 is from.
 defineProperty("gs_flag_1", globalPropertyf("sim/cockpit/radios/nav1_CDI"))  -- glideslope flag. 0 - flag is shown
 
-defineProperty("v_plank_2", globalPropertyf("sim/cockpit2/radios/indicators/nav2_hdef_dots_pilot")) -- horizontal deflection on course
-defineProperty("h_plank_2", globalPropertyf("sim/cockpit2/radios/indicators/nav2_vdef_dots_pilot")) -- vertical deflection on glideslope
-defineProperty("cr_flag_2", globalPropertyf("sim/cockpit2/radios/indicators/nav2_flag_from_to_pilot")) -- Nav-To-From indication, nav1, pilot, 0 is flag, 1 is to, 2 is from.
+defineProperty("v_plank_2", globalPropertyf("sim/cockpit2/radios/indicators/hsi_hdef_dots_pilot")) -- horizontal deflection on course
+defineProperty("h_plank_2", globalPropertyf("sim/cockpit2/radios/indicators/hsi_vdef_dots_pilot")) -- vertical deflection on glideslope
+defineProperty("cr_flag_2", globalPropertyf("sim/cockpit2/radios/indicators/hsi_flag_from_to_pilot")) -- Nav-To-From indication, nav1, pilot, 0 is flag, 1 is to, 2 is from.
 defineProperty("gs_flag_2", globalPropertyf("sim/cockpit/radios/nav2_CDI"))  -- glideslope flag. 0 - flag is shown
 defineProperty("nav1_deg", globalPropertyf("sim/cockpit2/radios/indicators/nav1_relative_bearing_deg")) -- nav1 bearing
 defineProperty("nav2_deg", globalPropertyf("sim/cockpit2/radios/indicators/nav2_relative_bearing_deg")) -- nav1 bearing
@@ -182,7 +182,7 @@ function update()
 	
 	--print(course1, get(v_plank_1), (get(obs1_fromto) * 2 - 1), power1)
 	
-	-- add random noise deflection
+	--add random noise deflection
 	if coursersbn == 0 and math.random() > 0.997 then 
 		coursersbn = (math.random() - 0.49999) * 15 * power1 
 		rsbn_flag_vis = 1 - power1
@@ -207,7 +207,7 @@ function update()
 		g2_lamp = false
 		g2_flag_vis = 1 - power1
 	end
-
+	
 	-- set course and glide planks position, depending on selected source
 	local sel_nav = get(nav_select)
 		if sel_nav == 0 then -- selected "RSBN"

@@ -84,7 +84,7 @@ local torq_coef = 92 / 1300  -- 92 kg/cm2 equals 1312 N*m
 	local left_feather = false
 	local right_feather = false
 
-	local deg_coef = 8 + 9
+	local deg_coef = 8 + 11
 
 	local left_counter = 0
 	local right_counter = 0
@@ -120,17 +120,17 @@ if passed > 0 then
 	local left_button = get(feather1_button)
 
 	if left_rpm > 30 then
+
 		-- limit pitch at beta
-		if prop1_out_beta and pitch_left <= 21 then
-			pitch_left = 21
-			set(prop_pitch_1, pitch_left - deg_coef)
+		if prop1_out_beta and pitch_left <= 19 then
+			pitch_left = 19
+			set(prop_pitch_1, pitch_left - deg_coef)	
 		end
-
-		-- check if prop is out beta
-		if pitch_left >= 21 and stop == 1 then prop1_out_beta = true
-		else prop1_out_beta = false end
 		
-
+		-- check if prop is out beta
+		if pitch_left >= 19 and stop == 1 then prop1_out_beta = true
+		else prop1_out_beta = false end		
+		
 		-- autofeather and feather test
 		if get(feather1_test1) == 1 then left_torq = 9
 		elseif get(feather1_test2) == 1 then left_torq = -1 end
@@ -178,14 +178,15 @@ if passed > 0 then
 	local right_button = get(feather2_button)
 
 	if right_rpm > 30 then
+		
 		-- limit pitch at beta
-		if prop2_out_beta and pitch_right <= 21 then
-			pitch_right = 21
-			set(prop_pitch_2, pitch_right - deg_coef)
+		if prop2_out_beta and pitch_right <= 19 then
+			pitch_right = 19
+			set(prop_pitch_2, pitch_right - deg_coef)			
 		end
 
 		-- check if prop is out beta
-		if pitch_right >= 21 and stop == 1 then prop2_out_beta = true
+		if pitch_right >= 19 and stop == 1 then prop2_out_beta = true
 		else prop2_out_beta = false end
 
 		-- autofeather and feather test

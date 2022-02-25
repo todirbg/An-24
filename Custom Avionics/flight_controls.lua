@@ -109,8 +109,8 @@ function update()
 	end
 	
 	-- add smooth movements
-	ail_actual_L = ail_actual_L + (left_ail_deg - ail_actual_L) * passed * 10
-	ail_actual_R = ail_actual_R + (right_ail_deg - ail_actual_R) * passed * 10
+	ail_actual_L = ail_actual_L + (left_ail_deg - ail_actual_L) * passed * 5 --10
+	ail_actual_R = ail_actual_R + (right_ail_deg - ail_actual_R) * passed * 5 --10
 
 	-- set results
 	set(ail_set_L, ail_actual_L)
@@ -141,7 +141,7 @@ function update()
 
 
 	-- smooth move and add hydraulic
-	elevator_actual = elevator_actual + (elevator_deg - elevator_actual) * passed * 10
+	elevator_actual = elevator_actual + (elevator_deg - elevator_actual) * passed * 5 --10
 	
 	--set(elevator_trim, 0)
 	set(elevator, elevator_actual)
